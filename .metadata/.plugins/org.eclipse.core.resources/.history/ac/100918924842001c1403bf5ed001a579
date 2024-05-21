@@ -1,0 +1,12 @@
+package java2Blog;
+
+//generate array of n length sum of which is 0
+
+public class OracleTest3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package java2Blog;
+
+//Given an array containing zeroes, ones and twos only. Write a function to sort the given array in O(n) time complexity.
+
+public class Program22 {
+
+	public static void main(String args[]) {
+		
+		int arr[] = {1, 2, 2, 0, 0, 1, 2, 2, 1};
+		
+	}
+	
+	static void ArrangeOneTwoThreeUsingCountingSort(int[] input) {
+		
+		int countZero=0;
+		int countOne=0;
+		int countTwo=0;
+		
+		int len = input.length;
+		
+		for(int i=0; i<len; i++) {
+			if(input[i] == 0) {
+				countZero++;
+			}else if(input[i] == 1) {
+				countOne++;
+			}else if(input[i] == 2) {
+				countTwo++;
+			}
+		}
+	}
+
+
+	
+	static void printArray(int[] arr) {
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+}

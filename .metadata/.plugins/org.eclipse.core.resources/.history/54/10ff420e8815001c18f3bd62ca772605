@@ -1,0 +1,40 @@
+package sorting;
+
+public class MergeSort {
+	
+	public static void main(String args[]) {
+		
+		int[] input = {65,25,12,22,11,34};
+		
+		merge_sort(input, 0, input.length-1);
+	}
+	
+	public static void merge_sort(int[] input, int left, int right) {
+		
+		int mid =0;
+		if(right>left) {
+			mid = left + (right-left)/2;
+			
+			merge_sort(input, left, mid);
+			merge_sort(input, mid+1, right);
+			merge(input, left, mid, right);
+		}
+	}
+	
+	public static void merge(int[] input, int left, int mid, int right) {
+		
+		//getting size of two sub-arrays
+		
+		int size1 = mid-left+1;
+		int size2 = right-mid;
+		
+		//creating array for temporary storage
+		int[] temp1 = new int[size1];
+		int[] temp2 = new int[size2];
+		
+		
+	}
+
+}
+
+

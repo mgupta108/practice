@@ -1,0 +1,69 @@
+package java2Blog;
+
+import java.util.Arrays;
+
+//find subarrays with given sum in an array.
+
+public class Program26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {2, 3, 6, 4, 9, 0, 11};
+		int num = 11;
+		
+		getSubbraysWithGivenSum_BruteForce(arr,num);
+		
+	}
+	
+	static void getSubbraysWithGivenSum_Sorting(int [] in, int reqdSum) {
+		
+		//sorting the array
+		Arrays.sort(in);
+		
+		int len = in.length;
+		int l = 0;
+		int r = len-1;
+		int tempSum =0;
+		
+		//discarding all the element gt reqdSum from right
+		while(in[r] >reqdSum) {
+			r--;
+		}
+		
+		while(l<r) {
+			
+			//comparing if sum of current left and current right element is equals to reqdSum
+			tempSum = in[l] + in[r];
+			
+			if(tempSum == reqdSum) {
+				System.out.println("Subarray is [" + l + " "+r + " ]");
+			}
+			
+			l++;
+			r--;
+		}
+	}
+	
+	static void getSubbraysWithGivenSum_BruteForce(int[] in, int reqdSum) {
+		
+		int len = in.length;
+		int sum =0;
+		
+		for(int i=0; i<len; i++) {
+			
+			sum =0;
+			
+			for(int j=i; j<len; j++) {
+				
+				//getting the sum in range (j , len)
+				sum += in[j];
+				
+				if(sum == reqdSum) {
+					System.out.println("Subarray is [" + i + " "+j + " ]");
+				}
+			}
+		}
+	}
+
+}

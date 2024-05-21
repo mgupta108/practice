@@ -1,0 +1,23 @@
+package java2Blog;
+
+public class Program8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//find length of array without using any inbuilt method
+		
+		String input = "crocodile";
+		int len  = -1;
+		
+		try {
+			while(true) {
+				input.charAt()
+			}
+		}catch(Exception e) {
+			
+		}
+
+	}
+
+}

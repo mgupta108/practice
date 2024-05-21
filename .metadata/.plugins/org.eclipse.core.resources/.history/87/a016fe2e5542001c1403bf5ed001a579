@@ -1,0 +1,20 @@
+package java2Blog;
+
+//Count number of occurrences (or frequency) of each element in a sorted array
+
+public class Program25 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {2, 2, 2, 3, 3, 4, 5, 5, 6, 6};
+		
+		int elem = 2;
+		int length = arr.length;
+		
+		int l = 0; int r = length-1;
+		
+
+	}
+
+}

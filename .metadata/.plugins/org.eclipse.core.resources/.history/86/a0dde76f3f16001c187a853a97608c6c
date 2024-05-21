@@ -1,0 +1,30 @@
+package java2Blog;
+
+
+public class Program7 {
+
+	//find all substring of a string
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String input = "abcd";
+		
+		for(int i =0; i<input.length(); i++) {
+			for(int j=i+1; j<=input.length(); j++) {
+				//System.out.println(input.substring(i,j));
+				System.out.println(i +" "+j);
+			}
+		}
+		
+		
+		
+//		String a = "string";
+//		String b = new String("string");
+//		String c = a;
+//		
+//		System.out.println(a == b);
+//		System.out.println(a == c);
+//		System.out.println(b.equals(c));
+	}
+}

@@ -1,0 +1,51 @@
+package sorting;
+
+public class ReverseString {
+	
+	public static void main(String args[]) {
+		
+		String input = "abc-1e";
+		
+//		char[] temp1 = input.toCharArray();
+//		
+//		for(int i=0;i<temp1.length;i++) {
+//			System.out.println(temp1[i]);
+//		}
+//		System.out.println("Test String is "+String.valueOf(temp1));
+//		
+		int start = 0;
+		int end = input.length()-1;
+		
+		
+		while(start!=end) {
+			
+			char left = input.charAt(start);
+			char right = input.charAt(end);
+			if(Character.isAlphabetic(input.charAt(start)) && Character.isAlphabetic(input.charAt(start))) {
+				//swap the characters
+				
+				char[] temp = input.toCharArray();
+				
+				temp[start] = right;
+				temp[end] = left;
+				
+				input = String.valueOf(temp);
+				
+				start++;
+				end--;
+				
+			}else if(!Character.isAlphabetic(left)) {
+				
+				//increase the left index by 1
+				start++;
+			} else {
+				end--;
+			}
+			
+		}
+		
+		System.out.println("New form of string is "+input);
+				
+	}
+
+}

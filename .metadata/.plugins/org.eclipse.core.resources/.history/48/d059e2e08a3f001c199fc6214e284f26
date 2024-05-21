@@ -1,0 +1,53 @@
+package java2Blog;
+
+//Given an array containing zeroes, ones and twos only. Write a function to sort the given array in O(n) time complexity.
+
+public class Program22 {
+
+public static void main(String args[]) {
+		
+		int arr[] = {1, 2, 2, 0, 0, 1, 2, 2, 1};
+		
+		System.out.println("Before arranging 0,1 and 2");
+		printArray(arr);
+		
+		int len = arr.length;
+		int l = 0;
+		int r = len-1;
+		
+		int temp =0;
+		
+		while(l<r) {
+			
+			//traverse till we get odd in the left side
+			//if we keep 'if' instead of 'while' then also it is producing correct output
+			while(arr[l] != 2) {	
+				l++;
+			}
+			
+			//traverse till we get even in the right side
+			while(arr[r] != 0) {
+				r--;
+			}
+			
+			//swap odd in the left side with even in the right side
+			if(l<r) {
+				temp = arr[r];
+				arr[r] = arr[l];
+				arr[l] = temp;
+			}
+			
+		}
+		
+		System.out.println("After arranging");
+		printArray(arr);
+	}
+	
+	static void printArray(int[] arr) {
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+}

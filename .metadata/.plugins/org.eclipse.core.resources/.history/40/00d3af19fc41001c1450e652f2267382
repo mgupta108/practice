@@ -1,0 +1,38 @@
+package java2Blog;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class OracleTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "abbcdeff h";
+		
+		
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		//map.put('a', 2);
+		
+		for(int i=0; i<str.length(); i++) {
+			if(map.get(str.charAt(i)) == null) {
+				map.put(str.charAt(i), 1);
+			}else {
+				map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+			}
+		}
+		
+		for(Entry<Character, Integer> en : map.entrySet()) {
+			if(en.getValue() > 1) {
+				System.out.println(en.getKey() + " is repeated "+ en.getValue() + " times.");
+			}
+			
+			//System.out.println(en.getKey() + " is repeated "+ en.getValue() + " times.");
+		}
+		
+		//System.out.println("MAp test "+map.get('b'));
+	}
+
+}

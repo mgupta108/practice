@@ -1,0 +1,10 @@
+Feature: Application Login
+  
+  Scenario: Home Page Default Login
+  Given User is on landing page
+  When User login with username "mano" and password "xyz"
+  Then Home Page is populated
+  And Cards displayed are "true"
+  
+ When User signs up with following details
+ |mohit|mishra|well fargo|Bangalore|Software Developer|

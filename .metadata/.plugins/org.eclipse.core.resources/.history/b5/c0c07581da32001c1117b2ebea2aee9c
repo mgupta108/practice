@@ -1,0 +1,12 @@
+package java2Blog;
+
+//Search an element in rotated and sorted array.
+
+public class Program12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

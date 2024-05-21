@@ -1,0 +1,18 @@
+package sorting;
+
+public class MergeSort {
+	
+	public static void main(String args[]) {
+		
+		int[] input = {65,25,12,22,11,34};
+		
+		merge_sort(input, 0, input.length-1)
+	}
+	
+	public static int[] merge_sort(int[] input, int left, int right) {
+		
+	}
+
+}
+
+

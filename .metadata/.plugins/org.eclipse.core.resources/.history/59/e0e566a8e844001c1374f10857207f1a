@@ -1,0 +1,12 @@
+package java2Blog;
+
+//find subarrays with given sum in an array.
+
+public class Program26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

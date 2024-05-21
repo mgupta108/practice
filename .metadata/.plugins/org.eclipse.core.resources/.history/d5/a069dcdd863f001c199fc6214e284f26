@@ -1,0 +1,14 @@
+package java2Blog;
+
+//Given an array of 0’s and 1’s in random order, you need to separate 0’s and 1’s in an array
+
+public class Program20 {
+	
+	public static void main(String args[]) {
+		
+		int arr[] = {0,1,0,0,1,1,1,0,1};
+		
+		
+	}
+
+}

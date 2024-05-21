@@ -1,0 +1,51 @@
+package java2Blog;
+
+public class Program5 {
+
+	//find duplicate characters in a string
+	public static void main(String[] args) {
+		
+		//Method1 : using index
+		find_deupes("aabb");
+		
+		
+		//Method2 : Using sorted Array
+		
+		//Method3 : Using char Array
+		
+		//Method4 : Using Collection
+	}
+	
+	//Method1
+	private static void find_deupes(String str1) {
+		
+		char[] dupes = new char[str1.length()];
+		int index = -1;
+				
+		
+		for(int i=0; i<str1.length(); i++) {
+			int firstIndex = str1.indexOf(str1.charAt(i));
+			int lastIndex = str1.lastIndexOf(str1.charAt(i));
+			
+			System.out.println("For character "+str1.charAt(i) + " first index "+firstIndex+" last index "+lastIndex);
+			if(firstIndex != lastIndex) {
+				if(!Program3.isElementPresent(dupes, index, str1.charAt(i))) {
+					dupes[++index] = str1.charAt(i);
+				}
+			}
+		}
+		
+		//printing duplicate elements
+		if(index == -1) {
+			System.out.println("No duplicate Elements found");
+		}else {
+			System.out.print("Duplicate Elements are : [");
+			for(int i=0;i<=index; i++) {
+				System.out.print(dupes[i] + " ");
+			}
+			System.out.print("]");
+		}
+		
+	}
+
+}

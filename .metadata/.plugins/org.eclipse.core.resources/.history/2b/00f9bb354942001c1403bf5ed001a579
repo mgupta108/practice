@@ -1,0 +1,29 @@
+package java2Blog;
+
+//generate array of n length sum of which is 0
+
+public class OracleTest3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int n = 3;
+		int sum_temp = 0;
+		
+		int[] input = new int[n];
+		
+		for(int i=0; i<n-2; i++) {
+			input[i] = i;
+			sum_temp += input[i];
+		}
+		
+		//setting the last number as negation of sum of all other elements
+		input[n-1] = -sum_temp;
+		
+		//printing the array
+		for(int i=0; i<n; i++) {
+			System.out.println(input[i] + " ");
+		}
+	}
+
+}

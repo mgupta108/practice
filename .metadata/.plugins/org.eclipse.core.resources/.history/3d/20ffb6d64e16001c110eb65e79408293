@@ -1,0 +1,44 @@
+package java2Blog;
+
+public class Problem9 {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//find all permutation(same length) of a string
+		
+		permutate2("ab", 0);
+	}
+	
+	public static void permutate2(String in, int index) {
+		if(in.length()==index) {
+			System.out.print(in);
+			System.out.print(" ");
+		}else if(in.length() == 2) {
+			//System.out.print(in.charAt(index)+""+in.charAt(index+1));
+			//System.out.print(in.charAt(index+1)+""+in.charAt(index));
+			permutate(in.substring(index), 0);
+			permutate(in.substring(index+1), 0);
+		}else {
+			System.out.print(in.charAt(index));
+			permutate(in.substring(index+1), index+1);
+		}
+	}
+	
+	public static void permutate(String in, int index) {
+		if(in.length()==1) {
+			System.out.print(in);
+			System.out.print(" ");
+		}else if(in.length() == 2) {
+			//System.out.print(in.charAt(index)+""+in.charAt(index+1));
+			//System.out.print(in.charAt(index+1)+""+in.charAt(index));
+			permutate(in.substring(index), 0);
+			permutate(in.substring(index+1), 0);
+		}else {
+			System.out.print(in.charAt(index));
+			permutate(in.substring(index+1), index+1);
+		}
+	}
+
+}

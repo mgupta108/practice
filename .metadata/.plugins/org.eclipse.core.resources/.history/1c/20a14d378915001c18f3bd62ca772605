@@ -1,0 +1,68 @@
+package sorting;
+
+public class MergeSort {
+	
+	public static void main(String args[]) {
+		
+		int[] input = {65,25,12,22,11,34};
+		
+		merge_sort(input, 0, input.length-1);
+	}
+	
+	public static void merge_sort(int[] input, int left, int right) {
+		
+		int mid =0;
+		if(right>left) {
+			mid = left + (right-left)/2;
+			
+			merge_sort(input, left, mid);
+			merge_sort(input, mid+1, right);
+			merge(input, left, mid, right);
+		}
+	}
+	
+	public static void merge(int[] input, int left, int mid, int right) {
+		
+		//getting size of two sub-arrays
+		
+		int size1 = mid-left+1;
+		int size2 = right-mid;
+		
+		//creating array for temporary storage
+		int[] temp1 = new int[size1];
+		int[] temp2 = new int[size2];
+		
+		//filling the data in temp array
+		for(int i=0; i<size1;i++) {
+			temp1[i++] = input[left+i];
+		}
+		for(int j=0; j<size2;j++) {
+			temp2[j++] = input[mid+j+1];
+		}
+		
+		int curr_index1 = 0;
+		int curr_index2 = 0;
+		
+		//initial index of merged array
+		int top_index = left;
+		
+		while((curr_index1 < size1) && (curr_index2 <size2)) {
+			if(temp1[curr_index1] < temp2[curr_index2]) {
+				mergeArray[top_index] = temp1[curr_index1];
+				top_index++;
+				curr_index1++;
+			}else {
+				mergeArray[top_index] = input2[curr_index2];
+				top_index++;
+				curr_index2++;
+			}
+			
+		}
+		int curr_index = left;
+		
+		while()
+	}
+
+}
+
+

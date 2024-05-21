@@ -1,0 +1,57 @@
+package java2Blog;
+
+//Given an array of 0’s and 1’s in random order, you need to separate 0’s and 1’s in an array
+
+public class Program20 {
+	
+	public static void main(String args[]) {
+		
+		//int arr[] = {0,1,0,0,1,1,1,0,1};
+		
+		int arr[] = {0,1,0,0,1,1,1,0,1};
+		
+		
+		System.out.println("Before separation");
+		printArray(arr);
+		
+		int len = arr.length;
+		int l = 0;
+		int r = len-1;
+		
+		int temp =0;
+		
+		while(l<r) {
+			
+			//traverse till we get 1 in the left side
+			//if we keep 'if' instead of 'while' then also it is producing correct output
+			while(arr[l] != 1) {	
+				l++;
+			}
+			
+			//traverse till we get 0 in the right side
+			while(arr[r] != 0) {
+				r--;
+			}
+			
+			//swap 1 in the left side with 0 in the right side
+			if(l<r) {
+				temp = arr[r];
+				arr[r] = arr[l];
+				arr[l] = temp;
+			}
+			
+		}
+		
+		System.out.println("After separation");
+		printArray(arr);
+	}
+	
+	static void printArray(int[] arr) {
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+}

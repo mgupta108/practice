@@ -1,0 +1,35 @@
+package java2Blog;
+
+import java.util.HashMap;
+import java.util.Map;
+
+//find the number occurring odd number of times in an array (only one element is repeated odd times)
+
+public class Program15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int result = 10^10;
+		
+		System.out.println("Result is "+result);
+
+	}
+	
+	int getOddTimesRepeatedElements(int[] arr) {
+		
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		int elem = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			if(map.get(arr[i]) == null) {
+				map.put(arr[i], 1);
+			}else {
+				map.put(arr[arr[i]], arr.get)
+			}
+		}
+		return 0;
+	}
+
+}

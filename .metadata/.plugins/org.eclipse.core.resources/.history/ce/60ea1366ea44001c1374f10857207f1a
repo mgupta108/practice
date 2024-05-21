@@ -1,0 +1,42 @@
+package java2Blog;
+
+//find subarrays with given sum in an array.
+
+public class Program26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {2, 3, 6, 4, 9, 0, 11};
+		int num = 9;
+		
+		getSubbraysWithGivenSum_BruteForce(arr,num);
+	}
+	
+	static void getSubbraysWithGivenSum_BruteForce(int[] in, int reqdSum) {
+		
+		int len = in.length;
+		int sum =0;
+		
+		for(int i=0; i<len; i++) {
+			
+			sum =0;
+			
+			for(int j=0; j<len; j++) {
+				
+				//if element present at index is equal to the reqdSum, print index range (j,j)
+//				if(in[j] == reqdSum) {
+//					System.out.println("Subarray is [" + i + " "+i + " ]");
+//				}
+				
+				//getting the sum in range (j , len)
+				sum += in[j];
+				
+				if(sum == reqdSum) {
+					System.out.println("Subarray is [" + i + " "+j + " ]");
+				}
+			}
+		}
+	}
+
+}

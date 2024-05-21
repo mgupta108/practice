@@ -1,0 +1,12 @@
+package java2Blog;
+
+public class Program20 {
+	
+	public static void main(String args[]) {
+		
+		int arr[] = {0,1,0,0,1,1,1,0,1};
+		
+		
+	}
+
+}

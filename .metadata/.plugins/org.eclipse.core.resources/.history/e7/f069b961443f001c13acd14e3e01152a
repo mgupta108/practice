@@ -1,0 +1,12 @@
+package java2Blog;
+
+//Find all pairs of elements from an array whose sum is equal to given number
+
+public class Program19 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package java2Blog;
+
+//find minimum number of platforms required for railway station
+
+public class Program16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		arrival[] = {1:00, 1:40, 1:50, 2:00, 2:15, 4:00}
+		departure[] = {1:10, 3:00, 2:20, 2:30, 3:15, 6:00}
+
+	}
+
+}

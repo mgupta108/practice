@@ -1,0 +1,35 @@
+package java2Blog;
+
+public class Program7 {
+
+	//find all substring of a string
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String input = "abcd";
+		
+		for(int i=0; i<input.length(); i++) {
+			
+		}
+		
+//		String a = "string";
+//		String b = new String("string");
+//		String c = a;
+//		
+//		System.out.println(a == b);
+//		System.out.println(a == c);
+//		System.out.println(b.equals(c));
+	}
+
+	public static String[] getOrderOne(String in) {
+		
+		String[] str= {};
+		
+		for(int i =0; i<in.length(); i++) {
+			
+		}
+		return str;
+		
+	}
+}

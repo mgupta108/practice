@@ -1,0 +1,39 @@
+package java2Blog;
+
+//Count number of occurrences (or frequency) of each element in a sorted array
+
+public class Program25 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {2, 2, 2, 3, 3, 4, 5, 5, 6, 6};
+		
+		int elem = 2;
+		int length = arr.length;
+		int freq = 0;
+		
+		int l = 0; int r = length-1; int mid = (l+r)/2;
+		
+		if((arr[l] == elem) && (arr[r] == elem)) {
+			freq = freq + r-l+1;
+		}else {
+			
+		}
+		
+
+	}
+	
+	static int getOccurence(int[] arr, int l, int r, int elem) {
+		
+		int mid = (l+r)/2;
+		int freq =0;
+		
+		if((arr[l] == elem) && (arr[r] == elem)) {
+			return   r-l+1;
+		}else {
+			freq = freq + getOccurence(arr, l, mid, elem);
+		}
+	}
+
+}

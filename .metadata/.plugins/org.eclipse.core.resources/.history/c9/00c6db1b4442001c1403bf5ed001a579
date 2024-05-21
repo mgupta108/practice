@@ -1,0 +1,72 @@
+package java2Blog;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class OracleTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "abbcdeff h";
+		
+		//getCountOfDuplicates_map(str);
+		
+		char in = 4;
+		int convert = 'b';
+		
+		char temp_char = 100;
+		
+		System.out.println(convert);
+		
+		System.out.println(temp_char);
+		
+		int[] list = new int[256];
+		
+//		for(int i=0; i<list.length; i++) {
+//			list[i] = (char) i;
+//		}
+		int temp =0;
+		
+		for(int i=0; i<str.length(); i++) {
+			
+			temp = str.charAt(i);
+			System.out.println(temp);
+			
+			list[temp]++;
+			
+		}
+		
+		
+		System.out.println("list print is "+list[100]);
+		
+	}
+	
+	static void getCountOfDuplicates(String str) {
+		
+	}
+	
+	static void getCountOfDuplicates_map(String str) {
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		//map.put('a', 2);
+		
+		for(int i=0; i<str.length(); i++) {
+			if(map.get(str.charAt(i)) == null) {
+				map.put(str.charAt(i), 1);
+			}else {
+				map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+			}
+		}
+		
+		for(Entry<Character, Integer> en : map.entrySet()) {
+			if(en.getValue() > 1) {
+				System.out.println(en.getKey() + " is repeated "+ en.getValue() + " times.");
+			}
+			
+		}
+		
+	}
+
+}

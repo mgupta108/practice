@@ -1,0 +1,40 @@
+package java2Blog;
+
+public class CharCountConsecutive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Input: ABCDAB
+		//Output: A:1 B :1C:1 D:1 A:1 B:1
+		
+		//AABBAABB
+		//A:2B2A2B2
+		
+		String in = "ABCDAB";
+		
+		char current = '\u0000'; 
+		
+		int left = 0;
+		int right = in.length() -1; 
+		
+		int prev = '\u0000';
+		int count = 0;
+		
+		do {
+			current = in.charAt(left);
+			
+			if(current == prev) {
+				count++;
+			} else {
+				System.out.println(prev + " : "+count);
+				prev = current;
+			}
+			
+			left++;
+			
+		}while(left != right);
+
+	}
+
+}

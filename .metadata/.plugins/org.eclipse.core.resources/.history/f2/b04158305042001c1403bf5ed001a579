@@ -1,0 +1,14 @@
+package java2Blog;
+
+//Sliding window maximum in java
+
+public class Program24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arr = {2,6,-1,2,4,1,-6,5};
+		in k =3;
+	}
+
+}

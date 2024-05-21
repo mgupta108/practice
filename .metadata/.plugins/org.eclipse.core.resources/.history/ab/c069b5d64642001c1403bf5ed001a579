@@ -1,0 +1,63 @@
+package java2Blog;
+
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class OracleTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "abbcdeffff  h";
+		
+		//getCountOfDuplicates_map(str);
+		
+		Calendar cl1 = Calendar.getInstance();
+		
+		Calendar cl2 = Calendar.getInstance();
+		
+		long diff = cl1.getTimeInMillis() - cl1.getTimeInMillis();
+		
+		System.out.println("Diff is ");
+		
+	}
+	
+	static void getCountOfDuplicates(String str) {
+		int[] list = new int[256];
+
+		for(int i=0; i<str.length(); i++) {
+			list[str.charAt(i)]++;
+		}
+		
+		for(int i=0; i<list.length; i++) {
+			if(list[i] > 1) {
+				System.out.println((char)i + " is repeated "+list[i] + " times.");
+			}
+		}
+	}
+	
+	static void getCountOfDuplicates_map(String str) {
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		//map.put('a', 2);
+		
+		for(int i=0; i<str.length(); i++) {
+			if(map.get(str.charAt(i)) == null) {
+				map.put(str.charAt(i), 1);
+			}else {
+				map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+			}
+		}
+		
+		for(Entry<Character, Integer> en : map.entrySet()) {
+			if(en.getValue() > 1) {
+				System.out.println(en.getKey() + " is repeated "+ en.getValue() + " times.");
+			}
+			
+		}
+		
+	}
+
+}

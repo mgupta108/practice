@@ -1,0 +1,73 @@
+package java2Blog;
+
+public class Problem9 {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//find all permutation(same length) of a string
+		
+		String input = "abcd";
+		
+		permutate3(input, 0, input.length()-1);
+		//System.out.println(swap("abcd", 0, 3));
+	}
+	
+	public static void permutate3(String in, int begin, int end) {
+		
+		if(begin == end) {
+			System.out.println(in);
+		}else {
+			for(int i=begin; i<=end; i++) {
+				in = swap(in, begin, i);
+				permutate3(in, begin+1,end);
+				in = swap(in, begin, i);
+			}
+		}
+		
+	}
+	
+	public static String swap(String str, int index1, int index2) {
+		
+		char[] tempArray = str.toCharArray();
+		char temp = tempArray[index2];
+		tempArray[index2] = tempArray[index1];
+		tempArray[index1] = temp;
+		
+		return String.valueOf(tempArray);
+		
+	}
+	
+	public static void permutate2(String in, int index) {
+		if(in.length()==index+1) {
+			System.out.print(in);
+			System.out.print(" ");
+		}else if((in.length()-index) == 2) {
+			System.out.print(in.charAt(index)+""+in.charAt(index+1));
+			System.out.print(" ");
+			System.out.print(in.charAt(index+1)+""+in.charAt(index));
+//			permutate2(in.substring(index), 0);
+//			permutate2(in.substring(index+1), 0);
+		}else {
+			System.out.print(in.charAt(index));
+			permutate2(in.substring(index+1), 0);
+		}
+	}
+	
+	public static void permutate(String in, int index) {
+		if(in.length()==1) {
+			System.out.print(in);
+			System.out.print(" ");
+		}else if(in.length() == 2) {
+			//System.out.print(in.charAt(index)+""+in.charAt(index+1));
+			//System.out.print(in.charAt(index+1)+""+in.charAt(index));
+			permutate(in.substring(index), 0);
+			permutate(in.substring(index+1), 0);
+		}else {
+			System.out.print(in.charAt(index));
+			permutate(in.substring(index+1), index+1);
+		}
+	}
+
+}

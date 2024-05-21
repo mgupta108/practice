@@ -1,0 +1,12 @@
+package java2Blog;
+
+//Find minimum number of platforms required for railway station
+
+public class Program16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
